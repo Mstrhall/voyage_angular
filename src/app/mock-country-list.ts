@@ -5,7 +5,7 @@ export const Countrys: Country[] = [
     name: "United States",
     continent: "North America",
     resident: 331002651,
-    picture: "us_picture.jpg",
+    picture: "../assets/us_picture.jpg",
     created: new Date("1776-07-04"),
   },
   {
@@ -13,7 +13,7 @@ export const Countrys: Country[] = [
     name: "China",
     continent: "Asia",
     resident: 1444216107,
-    picture: "china_picture.jpg",
+    picture: "../assets/china_picture.jpg",
     created: new Date("1949-10-01"),
   },
   {
@@ -21,7 +21,7 @@ export const Countrys: Country[] = [
     name: "Germany",
     continent: "Europe",
     resident: 83783942,
-    picture: "germany_picture.jpg",
+    picture: "../assets/germany_picture.jpg",
     created: new Date("1871-01-18"),
   },
   {
@@ -29,7 +29,7 @@ export const Countrys: Country[] = [
     name: "Brazil",
     continent: "South America",
     resident: 212559417,
-    picture: "brazil_picture.jpg",
+    picture: "../assets/brazil_picture.jpg",
     created: new Date("1822-09-07"),
   },
   {
@@ -37,7 +37,7 @@ export const Countrys: Country[] = [
     name: "India",
     continent: "Asia",
     resident: 1380004385,
-    picture: "india_picture.jpg",
+    picture: "../assets/india_picture.jpg",
     created: new Date("1947-08-15"),
   },
   {
@@ -45,15 +45,15 @@ export const Countrys: Country[] = [
     name: "Australia",
     continent: "Oceania",
     resident: 25499884,
-    picture: "australia_picture.jpg",
+    picture: "../assets/australia_picture.jpg",
     created: new Date("1901-01-01"),
   },
   {
     id: 7,
     name: "Russia",
-    continent: "Europe/Asia",
+    continent: "Europe",
     resident: 145912025,
-    picture: "russia_picture.jpg",
+    picture: "../assets/russia_picture.jpg",
     created: new Date("1991-12-26"),
   },
   {
@@ -61,7 +61,7 @@ export const Countrys: Country[] = [
     name: "Canada",
     continent: "North America",
     resident: 37742154,
-    picture: "canada_picture.jpg",
+    picture: "../assets/canada_picture.jpg",
     created: new Date("1867-07-01"),
   },
   {
@@ -69,7 +69,7 @@ export const Countrys: Country[] = [
     name: "South Africa",
     continent: "Africa",
     resident: 59308690,
-    picture: "south_africa_picture.jpg",
+    picture: "../assets/south_africa_picture.jpg",
     created: new Date("1910-05-31"),
   },
   {
@@ -77,7 +77,7 @@ export const Countrys: Country[] = [
     name: "Japan",
     continent: "Asia",
     resident: 126476461,
-    picture: "japan_picture.jpg",
+    picture: "../assets/japan_picture.jpg",
     created: new Date("660-01-01"),
   },
   {
@@ -85,7 +85,7 @@ export const Countrys: Country[] = [
     name: "Mexico",
     continent: "North America",
     resident: 128932753,
-    picture: "mexico_picture.jpg",
+    picture: "../assets/mexico_picture.jpg",
     created: new Date("1810-09-16"),
   },
   {
@@ -93,7 +93,7 @@ export const Countrys: Country[] = [
     name: "France",
     continent: "Europe",
     resident: 65273511,
-    picture: "france_picture.jpg",
+    picture: "../assets/france_picture.jpg",
     created: new Date("843-08-10"),
   },
   {
@@ -101,7 +101,7 @@ export const Countrys: Country[] = [
     name: "Argentina",
     continent: "South America",
     resident: 45195777,
-    picture: "argentina_picture.jpg",
+    picture: "../assets/argentina_picture.jpg",
     created: new Date("1816-07-09"),
   },
   {
@@ -109,7 +109,7 @@ export const Countrys: Country[] = [
     name: "Egypt",
     continent: "Africa",
     resident: 102334404,
-    picture: "egypt_picture.jpg",
+    picture: "../assets/egypt_picture.jpg",
     created: new Date("3150-04-01"),
   },
   {
@@ -117,7 +117,7 @@ export const Countrys: Country[] = [
     name: "Saudi Arabia",
     continent: "Asia",
     resident: 34813871,
-    picture: "saudi_arabia_picture.jpg",
+    picture: "../assets/saudi_arabia_picture.jpg",
     created: new Date("1932-09-23"),
   },
   {
@@ -125,7 +125,7 @@ export const Countrys: Country[] = [
     name: "Italy",
     continent: "Europe",
     resident: 60461826,
-    picture: "italy_picture.jpg",
+    picture: "../assets/italy_picture.jpg",
     created: new Date("1861-03-17"),
   },
   {
@@ -133,7 +133,7 @@ export const Countrys: Country[] = [
     name: "Nigeria",
     continent: "Africa",
     resident: 206139587,
-    picture: "nigeria_picture.jpg",
+    picture: "../assets/nigeria_picture.jpg",
     created: new Date("1960-10-01"),
   },
   {
@@ -141,7 +141,7 @@ export const Countrys: Country[] = [
     name: "South Korea",
     continent: "Asia",
     resident: 51269185,
-    picture: "south_korea_picture.jpg",
+    picture: "../assets/south_korea_picture.jpg",
     created: new Date("1948-08-15"),
   },
   {
@@ -149,7 +149,7 @@ export const Countrys: Country[] = [
     name: "United Kingdom",
     continent: "Europe",
     resident: 67886011,
-    picture: "uk_picture.jpg",
+    picture: "../assets/uk_picture.jpg",
     created: new Date("1707-05-01"),
   },
   {
@@ -157,7 +157,7 @@ export const Countrys: Country[] = [
     name: "Kenya",
     continent: "Africa",
     resident: 53771296,
-    picture: "kenya_picture.jpg",
+    picture: "../assets/kenya_picture.jpg",
     created: new Date("1963-12-12"),
   },
 

@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import {Countrys} from "./mock-country-list";
 import {Country} from "./country";
+import {count} from "rxjs";
 
 
 @Component({
@@ -9,12 +10,24 @@ import {Country} from "./country";
 })
 export class AppComponent implements OnInit{
   countryList =Countrys;
+  countrySelected :Country|undefined;
   ngOnInit() {
     console.table(this.countryList);
-    this.selectCountry(this.countryList[1]);
+
   }
 
-  selectCountry(country:Country){
-    console.log(`Vous avez choisi le pays ${country.name}`);
+  selectCountry(countryId :string){
+    const theCountry: Country|undefined =this.countryList.find(theCountry =>theCountry.id==+countryId);
+    if(theCountry){
+      console.log(`Vous avez choisi le pays ${theCountry?.name}`);
+      this.countrySelected=theCountry;
+    }
+    else {
+      console.log ("Vous avez choisi demander un pays qui n'existe pas" );
+      this.countrySelected=theCountry;
+    }
+
   }
+
+  protected readonly count = count;
 }

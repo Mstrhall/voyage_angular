@@ -1,19 +1,32 @@
-<h1> bienvenue sur ma page </h1>
-<p (click)="selectCountry(countryList[0])">{{countryList[0].name}}</p>
-<p>{{countryList[1].name}}</p>
-<p>{{countryList[2].name}}</p>
-<p>{{countryList[3].name}}</p>
-<p>{{countryList[4].name}}</p>
-<p>{{countryList[5].name}}</p>
-<p>{{countryList[6].name}}</p>
-<p>{{countryList[7].name}}</p>
-<p>{{countryList[8].name}}</p>
-<p>{{countryList[9].name}}</p>
-<p>{{countryList[10].name}}</p>
-<p>{{countryList[11].name}}</p>
-<p>{{countryList[12].name}}</p>
-<p>{{countryList[13].name}}</p>
-<p>{{countryList[14].name}}</p>
-<p>{{countryList[15].name}}</p>
-<p>{{countryList[16].name}}</p>
+<h1 class="center"> voyage </h1>
 
+<div class ="container">
+  <div class ="row">
+
+    <div *ngFor="let country of countryList" class="col m4 s6">
+      <div class ="card horizontal" appBorderCard >
+          <div class ="card-image">
+            <img [src]="country.picture" alt="Country Picture" height="190">
+
+          </div>
+
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>{{country.name |uppercase}}</p>
+            <span
+              class="{{country.continent|countryContinentColor}}">
+            {{country.continent}}
+            </span>
+            <p><strong>{{country.resident}}</strong></p>
+            <p><small>{{country.created |date:"dd/mm/yyyy"}}</small></p>
+    </div>
+    </div>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+</div>
