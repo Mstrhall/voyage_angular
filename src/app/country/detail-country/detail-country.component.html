@@ -1,0 +1,40 @@
+<div *ngIf="country" class="row">
+  <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{country.name}}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="country.picture">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>NOM</td>
+                <td><strong>{{country.name}}</strong></td>
+              </tr>
+            <tr>
+              <td> Habitant</td>
+              <td>{{country.resident}}</td>
+            </tr>
+            <tr>
+              <td> Continent </td>
+              <td> <div class="{{ country.continent | countryContinentColor }}">
+                {{country.continent}}
+              </div></td>
+            </tr>
+            <tr>
+              <td>Date </td>
+              <td>{{country.created|date:"dd/mm/yyyy"}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card-action">
+        <a (click)="goToCountryList()">Retour</a>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 *ngIf="!country" class="center">Aucune ville conue sous cet id </h4>

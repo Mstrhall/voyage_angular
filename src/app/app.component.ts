@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import {Countrys} from "./mock-country-list";
-import {Country} from "./country";
+import {Countrys} from "./country/mock-country-list";
+import {Country} from "./country/country";
 import {count} from "rxjs";
 
 

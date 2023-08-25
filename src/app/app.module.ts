@@ -2,22 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BorderCardDirective } from './border-card.directive';
-import { CountryContinentColorPipe } from './country-continent-color.pipe';
-import { ListCountryComponent } from './list-country/list-country.component';
-import { DetailCountryComponent } from './detail-country/detail-country.component';
+
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {CountryModule} from "./country/country.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    BorderCardDirective,
-    CountryContinentColorPipe,
-    ListCountryComponent,
-    DetailCountryComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule // Utilisez ici votre fichier de configuration des routes
+    CountryModule,
+    AppRoutingModule, // Utilisez ici votre fichier de configuration des routes
+
   ],
   providers: [],
   bootstrap: [AppComponent]

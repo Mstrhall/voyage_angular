@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListCountryComponent } from "./list-country/list-country.component";
-import { DetailCountryComponent } from "./detail-country/detail-country.component";
+import { ListCountryComponent } from "./country/list-country/list-country.component";
+import { DetailCountryComponent } from "./country/detail-country/detail-country.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 
 const routes: Routes = [
-  { path: 'country', component: ListCountryComponent },
-  { path: 'country/:id', component: DetailCountryComponent },
-  { path: '', redirectTo: '/country', pathMatch: 'full' } // Utilisation de pathMatch: 'full'
+
+  { path: '', redirectTo: '/country', pathMatch: 'full' },
+  {path:'**',component:PageNotFoundComponent}
 ];
 
 @NgModule({
