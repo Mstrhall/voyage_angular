@@ -1,0 +1,32 @@
+<!-- class-form.component.html -->
+<div class="container">
+  <h4>Ajouter une Classe</h4>
+  <form [formGroup]="countryForm" (ngSubmit)="onSubmit()">
+    <div class="input-field">
+      <input id="id" type="number" formControlName="id" class="validate" required>
+      <label for="id">ID</label>
+    </div>
+    <div class="input-field">
+      <input id="name" type="text" formControlName="name" class="validate" required>
+      <label for="name">Nom</label>
+    </div>
+    <div class="input-field">
+      <input id="continent" type="text" formControlName="continent" class="validate" required>
+      <label for="continent">Continent</label>
+    </div>
+    <div class="input-field">
+      <input id="resident" type="number" formControlName="resident" class="validate" required>
+      <label for="resident">Nombre de Résidents</label>
+    </div>
+    <div class="input-field">
+      <input id="picture" type="text" formControlName="picture" class="validate" required>
+      <label for="picture">Image (URL)</label>
+    </div>
+    <div class="input-field">
+      <input id="created" type="text" formControlName="created" class="datepicker validate" required>
+      <label for="created">Date de Création</label>
+    </div>
+    <button type="submit" [disabled]="!countryForm.valid">Ajouter</button>
+  </form>
+
+</div>

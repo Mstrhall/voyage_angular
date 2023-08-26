@@ -30,5 +30,8 @@ export class DetailCountryComponent implements OnInit {
       this.countryService.getCountryById(+countryId).subscribe(country=>this.country=country);
     }
   }
+  deletCountry(country: Country){
+    this.countryService.deleteCountryById(country.id).subscribe(()=>this.goToCountryList());
+  }
 }
 

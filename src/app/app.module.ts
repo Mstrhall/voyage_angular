@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {CountryModule} from "./country/country.module";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
 import {InMemoryDataService} from "./in-memory-data.service";
@@ -19,6 +19,7 @@ import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
   imports: [
     BrowserModule,
     FormsModule,
+
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
     CountryModule,
