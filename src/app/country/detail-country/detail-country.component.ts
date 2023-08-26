@@ -27,7 +27,7 @@ export class DetailCountryComponent implements OnInit {
     const countryId: string | null = this.router.snapshot.paramMap.get('id');
     if (countryId) {
       // Assuming your countryList is populated with data
-      this.country = this.countryList.find(country => country.id == +countryId);
+      this.countryService.getCountryById(+countryId).subscribe(country=>this.country=country);
     }
   }
 }

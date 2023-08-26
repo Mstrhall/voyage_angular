@@ -16,8 +16,11 @@ export class ListCountryComponent {
     private route:Router,
     private countryService: CountryService)
   {}
-  ngOnInit(){
-    this.countryList=this.countryService.getcountrylist();
+  ngOnInit() {
+    this.countryService.getcountrylist()
+      .subscribe(countryList => {
+        this.countryList = countryList;
+      });
   }
   goToCountry(country:Country){
     this.route.navigate(['/country',country.id]);
