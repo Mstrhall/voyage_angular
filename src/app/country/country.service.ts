@@ -52,6 +52,12 @@ export class CountryService {
 
    )
  }
+ searchCountryList(term:string):Observable<Country[]>{
+    return this.http.get<Country[]>(`api/country/?name=${term}`).pipe(
+      tap(response => this.log(response)),
+      catchError(error => this.handleError(error, []))
+    )
+ }
  getCountryContinentList():string[]{
     return['Europe,Asia,Africa,South America,North America,Oceania'];
   }

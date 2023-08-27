@@ -8,11 +8,19 @@ import {RouterModule, Routes} from "@angular/router";
 import {CountryService} from "./country.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AddCountryComponent } from './add-country/add-country.component';
+import {authGuard} from'../auth.guard'
+
+import { SearchCountryComponent } from './search-country/search-country.component';
 
 
 const countryRoute: Routes = [
-{ path: 'country', component: ListCountryComponent },
-{ path: 'country/:id', component: DetailCountryComponent },]
+
+
+{ path: 'country', component: ListCountryComponent ,canActivate:[authGuard]},
+  {path: 'country/add', component: AddCountryComponent, canActivate:[authGuard]},
+{ path: 'country/:id', component: DetailCountryComponent },
+
+]
 
 @NgModule({
   declarations: [
@@ -21,6 +29,8 @@ const countryRoute: Routes = [
     BorderCardDirective,
     CountryContinentColorPipe,
     AddCountryComponent,
+
+    SearchCountryComponent,
 
 
   ],

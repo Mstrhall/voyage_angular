@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, , Validators } from '@angular/forms';
-import { Country } from '../country'; // Assurez-vous d'importer correctement le modèle Country
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import FormGroup and Validators
+import { Country } from '../country';
+import { CountryService } from '../country.service';
+import { Router } from '@angular/router'; // Import Router
+import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-add-country',
@@ -11,22 +14,32 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AddCountryComponent implements OnInit {
 
-  country: Country;
+  countryForm: FormGroup; // Declare the form group
 
-  constructor() {}
+  constructor(
+    private countryService: CountryService,
+    private formBuilder: FormBuilder, // Inject FormBuilder
+    private router: Router // Inject Router
+  ) {}
 
   ngOnInit() {
-
-    this.country = new Country();
+    this.countryForm = this.formBuilder.group({
+      id: ['', Validators.required],
+      name: ['', Validators.required],
+      continent: ['', Validators.required],
+      resident: ['', Validators.required],
+      picture: ['', Validators.required],
+      created: ['', Validators.required],
+    });
   }
-
 
   onSubmit(): void {
     if (this.countryForm.valid) {
-      this.country = this.countryForm.value;
-      this.countryForm
-      console.log(this.country);
+      const countryData = this.countryForm.value; // Get form values
+      this.countryService.addCountry(countryData).subscribe(() => this.router.navigate(['/country']));
+      console.log(countryData);
       this.countryForm.reset();
     }
   }
 }
+
